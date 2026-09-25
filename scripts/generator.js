@@ -1,6 +1,5 @@
 var { parse } = require('path');
 var pagination = require('hexo-pagination');
-var _pick = require('lodash.pick');
 
 function filterHTMLTags(str) {
   return str ? str
@@ -155,7 +154,7 @@ function generator(cfg, site) {
   if (restful.site) {
     apiData.push({
       path: 'api/site.json',
-      data: JSON.stringify(restful.site instanceof Array ? _pick(cfg, restful.site) : cfg)
+      data: JSON.stringify(restful.site instanceof Array ? Object.fromEntries(restful.site.filter(function (key) { return key in cfg; }).map(function (key) { return [key, cfg[key]]; })) : cfg)
     });
   }
 
