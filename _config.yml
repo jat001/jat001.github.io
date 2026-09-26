@@ -97,12 +97,6 @@ ignore: []
 ## Themes: https://hexo.io/themes/
 theme: fluid
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: git@github.com:jat001/jat001.github.io.git
-
 feed:
   type: atom
   path: atom.xml
