@@ -57,4 +57,4 @@ jobs:
           OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESSKEY }}
           OSS_REGION: ${{ secrets.OSS_REGION }}
         run: |
-          ossutil sync public/ 'oss://${{ secrets.OSS_BUCKET }}/' -f --delete --checksum --acl default -j 10 --no-progress
+          ossutil sync public/ 'oss://${{ secrets.OSS_BUCKET }}/' -f --delete --acl default -j 10 --no-progress
