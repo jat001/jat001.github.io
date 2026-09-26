@@ -130,6 +130,7 @@ feed:
 
 sitemap:
   path: sitemap.xml
+  template: ./templates/sitemap.xml
 
 marked:
   mangle: false

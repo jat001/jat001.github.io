@@ -1,6 +1,6 @@
 hexo.extend.filter.register('post_permalink', function (permalink) {
-  const res = RegExp('^(20\\d{2})\\d{4}/(archive-)?[^/]+(/index\\.html)?').exec(
-    permalink
+  const res = /^(20\d{2})\d{4}\/(archive-)?[^/]+(\/index\.html)?/.exec(
+    permalink,
   )
 
   if (res !== null) {
