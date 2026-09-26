@@ -49,4 +49,4 @@ jobs:
 
       - name: Deploy to COS
         run: |
-          coscli sync public/ cos://site/ -r --delete --force --routines 10
+          coscli sync public/ cos://site/ -r --delete --force --skip-dir --routines 10
