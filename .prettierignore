@@ -1,6 +1,6 @@
 pnpm-lock.yaml
 
-# Copied from the theme, keep it diffable against upstream
+_config.yml
 _config.fluid.yml
 
 # Post templates
