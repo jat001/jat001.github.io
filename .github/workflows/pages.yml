@@ -4,6 +4,17 @@ on:
   push:
     branches:
       - master
+    paths:
+      - '**'
+      - '!.github/**'
+      - '!.vscode/**'
+      - '!scaffolds/**'
+      - '!source/_drafts/**'
+      - '!worker/**'
+      - '!.gitignore'
+      - '!README.md'
+      - '!wrangler.jsonc'
+      - .github/workflows/pages.yml
   workflow_dispatch:
 
 permissions:
