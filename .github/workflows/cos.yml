@@ -39,7 +39,7 @@ jobs:
           chmod a+x coscli
           echo "$RUNNER_TEMP/coscli" >> "$GITHUB_PATH"
           ./coscli --version
-          ./coscli config set --secret_id '${{ secrets.COS_SECRETID }}' --secret_key '${{ secrets.COS_SECRETKEY }}'
+          ./coscli config set --secret_id '${{ secrets.COS_SECRETID }}' --secret_key '${{ secrets.COS_SECRETKEY }}' --disable_auto_fetch_bucket_type true
           ./coscli config add -b '${{ secrets.COS_BUCKET }}' -r '${{ secrets.COS_REGION }}' -a site
 
       - name: Generate static content
