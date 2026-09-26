@@ -4,7 +4,7 @@
     "lib": ["esnext", "dom"],
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "types": [],
+    "types": ["node"],
     "strict": true,
     "noEmit": true,
     "erasableSyntaxOnly": true,
