@@ -1,0 +1,74 @@
+name: Deploy static content to Volcano Engine TOS
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '**'
+      - '!.github/**'
+      - '!.vscode/**'
+      - '!scaffolds/**'
+      - '!source/_drafts/**'
+      - '!worker/**'
+      - '!.gitignore'
+      - '!README.md'
+      - '!wrangler.jsonc'
+      - '!tsconfig.json'
+      - '!.prettierrc'
+      - '!.prettierignore'
+      - .github/workflows/tos.yml
+  workflow_dispatch:
+
+concurrency:
+  group: tos
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install rclone
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/rclone"
+          cd "$RUNNER_TEMP/rclone"
+          gh release download --repo rclone/rclone --pattern '*-linux-amd64.zip' --pattern SHA256SUMS
+          sha256sum --check --ignore-missing SHA256SUMS
+          unzip -jo rclone-*-linux-amd64.zip '*/rclone'
+          echo "$RUNNER_TEMP/rclone" >> "$GITHUB_PATH"
+          ./rclone version
+
+      - name: Generate static content
+        run: |
+          pnpm install --prod
+          pnpm run build
+
+      - name: Deploy to TOS
+        env:
+          RCLONE_CONFIG_TOS_TYPE: s3
+          RCLONE_CONFIG_TOS_PROVIDER: Other
+          RCLONE_CONFIG_TOS_ACCESS_KEY_ID: ${{ secrets.TOS_ACCESSID }}
+          RCLONE_CONFIG_TOS_SECRET_ACCESS_KEY: ${{ secrets.TOS_ACCESSKEY }}
+          RCLONE_CONFIG_TOS_REGION: ${{ secrets.TOS_REGION }}
+          RCLONE_CONFIG_TOS_ENDPOINT: https://tos-s3-${{ secrets.TOS_REGION }}.volces.com
+          RCLONE_CONFIG_TOS_FORCE_PATH_STYLE: 'false'
+          RCLONE_CONFIG_TOS_DISABLE_HTTP2: 'true'
+          RCLONE_CONFIG_TOS_LIST_VERSION: '2'
+          RCLONE_CONFIG_TOS_NO_CHECK_BUCKET: 'true'
+        run: |
+          rclone sync public/ 'tos:${{ secrets.TOS_BUCKET }}' --checksum --fast-list --transfers 10 -v
