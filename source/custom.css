@@ -1,12 +1,12 @@
-.header-inner[style="height: 100vh;"] .flex-center {
-  background-image: url("/images/logo_full.svg");
+.header-inner[style='height: 100vh;'] .flex-center {
+  background-image: url('/images/logo_full.svg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: auto 200px;
 }
 
 @media (max-width: 767px) {
-  .header-inner[style="height: 100vh;"] .flex-center {
+  .header-inner[style='height: 100vh;'] .flex-center {
     background-size: auto 150px;
   }
 }

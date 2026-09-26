@@ -14,6 +14,9 @@ on:
       - '!.gitignore'
       - '!README.md'
       - '!wrangler.jsonc'
+      - '!tsconfig.json'
+      - '!.prettierrc'
+      - '!.prettierignore'
       - .github/workflows/oss.yml
   workflow_dispatch:
 
@@ -52,7 +55,7 @@ jobs:
 
       - name: Generate static content
         run: |
-          pnpm install
+          pnpm install --prod
           pnpm run build
 
       - name: Deploy to OSS

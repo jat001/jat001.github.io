@@ -162,6 +162,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  typescript: npm:typescript-native-bridge@6.0.3-bridge.17.tsgo.7.0.2
+
 importers:
 
   .:
@@ -205,6 +208,13 @@ importers:
       hexo-theme-fluid:
         specifier: ^1.9.9
         version: 1.9.9(nunjucks@3.2.4(chokidar@3.6.0))
+    devDependencies:
+      prettier:
+        specifier: ^3.9.9
+        version: 3.9.9
+      typescript:
+        specifier: npm:typescript-native-bridge@6.0.3-bridge.17.tsgo.7.0.2
+        version: typescript-native-bridge@6.0.3-bridge.17.tsgo.7.0.2
 
 packages:
 
@@ -247,6 +257,41 @@ packages:
 
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+
+  '@typescript-native-bridge/darwin-arm64@6.0.3-bridge.17.tsgo.7.0.2':
+    resolution: {integrity: sha512-Vpg8so68YwnLB7IU+/j2bKjIvDaXY9oMY+k4VyesFpJLGTE4O6JAmOk8v6S6pHo7C417S6b3qIkvWjYGBkEiXQ==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@typescript-native-bridge/darwin-x64@6.0.3-bridge.17.tsgo.7.0.2':
+    resolution: {integrity: sha512-OWvfgOINl0+ALgsPhsXpNgCkpzefyV44StqmyUVXq7yzz9DEPynLPi9Giv6IMQE8vmdS4rOA7bs4i/DggamMtw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@typescript-native-bridge/linux-arm64@6.0.3-bridge.17.tsgo.7.0.2':
+    resolution: {integrity: sha512-TtDJqezDnZ1vm8CHzYtkceoA7ugo//NE9Mm3/zwVXdvYDxUCUlG9kDE5HUJlB3Xymi5opnTs6RroSLi10aENYQ==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@typescript-native-bridge/linux-arm@6.0.3-bridge.17.tsgo.7.0.2':
+    resolution: {integrity: sha512-Hci0x6qA1/mCoWp4hDGOYG4RGtLrzY7AFN+jSlb4d/HT8N1Wge1MYgQzg7DWmg42D+PjQYoeGOcGf6QCQ2zq0A==}
+    cpu: [arm]
+    os: [linux]
+
+  '@typescript-native-bridge/linux-x64@6.0.3-bridge.17.tsgo.7.0.2':
+    resolution: {integrity: sha512-yGedsXO9a0nTGwZ/vI+tDZ9SD8HDu+TnQbYIlSMLTbtYl8CKXNCFVBvw8XEro6DDGo8CIB3uNYHUXPRwZ7CwOg==}
+    cpu: [x64]
+    os: [linux]
+
+  '@typescript-native-bridge/win32-arm64@6.0.3-bridge.17.tsgo.7.0.2':
+    resolution: {integrity: sha512-RMm/YbPyv0qMRJV1378DPddut8jHXRYvHpb2ETT2VOx/ehfc4jvDD0uysaqivU//JjxRS3J+39ldXD+00Lwr1A==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@typescript-native-bridge/win32-x64@6.0.3-bridge.17.tsgo.7.0.2':
+    resolution: {integrity: sha512-gbTIfontb1I9SomZw5mXn+k2ekQnBkRu3lmCy4zuHvEqNFwFFA936CkwGpgifs/SK/fU2B2hGcksm1pQJ6w6mg==}
+    cpu: [x64]
+    os: [win32]
 
   a-sync-waterfall@1.0.1:
     resolution: {integrity: sha512-RYTOHHdWipFUliRFMCS4X2Yn2X8M87V/OpSqWzKKOGhzqyUxzyVmhHDH9sAvG+ZuQf/TAOFsLCpMw09I1ufUnA==}
@@ -960,6 +1005,11 @@ packages:
     resolution: {integrity: sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA==}
     engines: {node: '>=8.6'}
 
+  prettier@3.9.9:
+    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   pretty-hrtime@1.0.3:
     resolution: {integrity: sha512-66hKPCr+72mlfiSjlEB1+45IjXSqvVAIy6mocupoww4tBFE9R9IhwwUGoI4G++Tc9Aq+2rxOt0RFU6gPcrte0A==}
     engines: {node: '>= 0.8'}
@@ -1118,6 +1168,11 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
+  typescript-native-bridge@6.0.3-bridge.17.tsgo.7.0.2:
+    resolution: {integrity: sha512-n4rPgV60szK0/nJjqXnETdrWCr70EysgH3FRheHL5UME1lRBJhDhUZOoLNulnXlqB+2SXSpxn4KKF3S3l7ZUFA==}
+    engines: {node: '>=20.19'}
+    hasBin: true
+
   unpipe@1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
@@ -1224,6 +1279,27 @@ snapshots:
   '@nodable/entities@3.0.0': {}
 
   '@types/trusted-types@2.0.7':
+    optional: true
+
+  '@typescript-native-bridge/darwin-arm64@6.0.3-bridge.17.tsgo.7.0.2':
+    optional: true
+
+  '@typescript-native-bridge/darwin-x64@6.0.3-bridge.17.tsgo.7.0.2':
+    optional: true
+
+  '@typescript-native-bridge/linux-arm64@6.0.3-bridge.17.tsgo.7.0.2':
+    optional: true
+
+  '@typescript-native-bridge/linux-arm@6.0.3-bridge.17.tsgo.7.0.2':
+    optional: true
+
+  '@typescript-native-bridge/linux-x64@6.0.3-bridge.17.tsgo.7.0.2':
+    optional: true
+
+  '@typescript-native-bridge/win32-arm64@6.0.3-bridge.17.tsgo.7.0.2':
+    optional: true
+
+  '@typescript-native-bridge/win32-x64@6.0.3-bridge.17.tsgo.7.0.2':
     optional: true
 
   a-sync-waterfall@1.0.1: {}
@@ -2024,6 +2100,8 @@ snapshots:
 
   picomatch@2.3.2: {}
 
+  prettier@3.9.9: {}
+
   pretty-hrtime@1.0.3: {}
 
   prismjs@1.30.0: {}
@@ -2176,6 +2254,16 @@ snapshots:
       punycode: 2.3.1
 
   tslib@2.8.1: {}
+
+  typescript-native-bridge@6.0.3-bridge.17.tsgo.7.0.2:
+    optionalDependencies:
+      '@typescript-native-bridge/darwin-arm64': 6.0.3-bridge.17.tsgo.7.0.2
+      '@typescript-native-bridge/darwin-x64': 6.0.3-bridge.17.tsgo.7.0.2
+      '@typescript-native-bridge/linux-arm': 6.0.3-bridge.17.tsgo.7.0.2
+      '@typescript-native-bridge/linux-arm64': 6.0.3-bridge.17.tsgo.7.0.2
+      '@typescript-native-bridge/linux-x64': 6.0.3-bridge.17.tsgo.7.0.2
+      '@typescript-native-bridge/win32-arm64': 6.0.3-bridge.17.tsgo.7.0.2
+      '@typescript-native-bridge/win32-x64': 6.0.3-bridge.17.tsgo.7.0.2
 
   unpipe@1.0.0: {}
 
