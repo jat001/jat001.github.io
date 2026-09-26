@@ -38,13 +38,17 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
-      - name: Install ossutil
+      - name: Install rclone
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          version="$(curl -fsS https://gosspublic.alicdn.com/ossutil/v2/version.txt | awk '{print $NF}')"
-          curl -fsSLo "$RUNNER_TEMP/ossutil.zip" "https://gosspublic.alicdn.com/ossutil/v2/${version}/ossutil-${version}-linux-amd64.zip"
-          unzip -jo "$RUNNER_TEMP/ossutil.zip" '*/ossutil' -d "$RUNNER_TEMP/ossutil"
-          echo "$RUNNER_TEMP/ossutil" >> "$GITHUB_PATH"
-          "$RUNNER_TEMP/ossutil/ossutil" version
+          mkdir -p "$RUNNER_TEMP/rclone"
+          cd "$RUNNER_TEMP/rclone"
+          gh release download --repo rclone/rclone --pattern '*-linux-amd64.zip' --pattern SHA256SUMS
+          sha256sum --check --ignore-missing SHA256SUMS
+          unzip -jo rclone-*-linux-amd64.zip '*/rclone'
+          echo "$RUNNER_TEMP/rclone" >> "$GITHUB_PATH"
+          ./rclone version
 
       - name: Generate static content
         run: |
@@ -53,8 +57,11 @@ jobs:
 
       - name: Deploy to OSS
         env:
-          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESSID }}
-          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESSKEY }}
-          OSS_REGION: ${{ secrets.OSS_REGION }}
+          RCLONE_CONFIG_OSS_TYPE: s3
+          RCLONE_CONFIG_OSS_PROVIDER: Alibaba
+          RCLONE_CONFIG_OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESSID }}
+          RCLONE_CONFIG_OSS_SECRET_ACCESS_KEY: ${{ secrets.OSS_ACCESSKEY }}
+          RCLONE_CONFIG_OSS_ENDPOINT: oss-${{ secrets.OSS_REGION }}.aliyuncs.com
+          RCLONE_CONFIG_OSS_NO_CHECK_BUCKET: 'true'
         run: |
-          ossutil sync public/ 'oss://${{ secrets.OSS_BUCKET }}/' -f --delete --acl default -j 10 --no-progress
+          rclone sync public/ 'oss:${{ secrets.OSS_BUCKET }}' --checksum --fast-list --transfers 10 -v

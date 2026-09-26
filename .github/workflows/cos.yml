@@ -38,20 +38,17 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
-      - name: Install and setup coscli
+      - name: Install rclone
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          mkdir -p "$RUNNER_TEMP/coscli"
-          cd "$RUNNER_TEMP/coscli"
-          gh release download --repo tencentyun/coscli --pattern '*-linux-amd64' --pattern sha256sum.log
-          sha256sum --check --ignore-missing sha256sum.log
-          mv coscli-*-linux-amd64 coscli
-          chmod a+x coscli
-          echo "$RUNNER_TEMP/coscli" >> "$GITHUB_PATH"
-          ./coscli --version
-          ./coscli config set --secret_id '${{ secrets.COS_SECRETID }}' --secret_key '${{ secrets.COS_SECRETKEY }}' --disable_auto_fetch_bucket_type true
-          ./coscli config add -b '${{ secrets.COS_BUCKET }}' -r '${{ secrets.COS_REGION }}' -a site
+          mkdir -p "$RUNNER_TEMP/rclone"
+          cd "$RUNNER_TEMP/rclone"
+          gh release download --repo rclone/rclone --pattern '*-linux-amd64.zip' --pattern SHA256SUMS
+          sha256sum --check --ignore-missing SHA256SUMS
+          unzip -jo rclone-*-linux-amd64.zip '*/rclone'
+          echo "$RUNNER_TEMP/rclone" >> "$GITHUB_PATH"
+          ./rclone version
 
       - name: Generate static content
         run: |
@@ -59,5 +56,12 @@ jobs:
           pnpm run build
 
       - name: Deploy to COS
+        env:
+          RCLONE_CONFIG_COS_TYPE: s3
+          RCLONE_CONFIG_COS_PROVIDER: TencentCOS
+          RCLONE_CONFIG_COS_ACCESS_KEY_ID: ${{ secrets.COS_SECRETID }}
+          RCLONE_CONFIG_COS_SECRET_ACCESS_KEY: ${{ secrets.COS_SECRETKEY }}
+          RCLONE_CONFIG_COS_ENDPOINT: cos.${{ secrets.COS_REGION }}.myqcloud.com
+          RCLONE_CONFIG_COS_NO_CHECK_BUCKET: 'true'
         run: |
-          coscli sync public/ cos://site/ -r --delete --force --skip-dir --routines 10
+          rclone sync public/ 'cos:${{ secrets.COS_BUCKET }}' --checksum --fast-list --transfers 10 -v
