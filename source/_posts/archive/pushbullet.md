@@ -1,7 +1,7 @@
 ---
 title: Pushbullet —— 推送神器
 tags:
-  - Google
+  - 谷歌
   - 自动化
   - 软件
 id: 927

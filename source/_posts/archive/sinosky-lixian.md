@@ -2,7 +2,6 @@
 title: SinoSky 离线下载上线
 tags:
   - Lixian
-  - Xunlei
   - 离线下载
   - 迅雷
 id: 115

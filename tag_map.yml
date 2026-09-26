@@ -1,0 +1,315 @@
+# Tag name -> URL slug, sorted by slug. Loaded by lib/slug-maps.ts.
+12306.cn: 12306-cn
+'2012': '2012'
+2014年: '2014'
+'360': '360'
+56视频: 56-video
+AAC: aac
+简写: abbreviation
+AcFun: acfun
+去广告: ad-blocking
+Adobe Audition: adobe-audition
+AJAX: ajax
+阿里云: aliyun
+替代语法: alternative-syntax
+Amazon: amazon
+Amazon EC2: amazon-ec2
+Amazon Elastic Compute Cloud: amazon-elastic-compute-cloud
+Amazon Web Services: amazon-web-services
+Android: android
+周年纪念: anniversary
+杀毒软件: antivirus
+愚人节: april-fools-day
+ARC: arc
+Aria2: aria2
+汇编: assembly
+非对称加密: asymmetric-encryption
+异步: asynchronous
+Atomic: atomic
+自动化: automation
+AWS: aws
+备份: backup
+BAE: bae
+百度: baidu
+Baidu App Engine: baidu-app-engine
+Bash: bash
+BCS: bcs
+初学者: beginner
+BIK: bik
+bilibili: bilibili
+博客: blog
+启动: boot
+Bug: bug
+Burp Suite: burp-suite
+职业: career
+CDN: cdn
+科学上网: censorship-circumvention
+证书: certificate
+变色龙: chameleon
+字符编码: character-encoding
+字符集: character-set
+中国联通: china-unicom
+中文: chinese
+中文输入: chinese-input
+选择: choice
+Chrome: chrome
+云平台: cloud-platform
+CMD: cmd
+Code Editor: code-editor
+命令: command
+垃圾评论: comment-spam
+comments: comments
+作文: composition
+压缩: compression
+计算机网络: computer-network
+Concurrent: concurrent
+流程控制: control-flow
+control structures: control-structures
+著作权: copyright
+C++: cpp
+破解: cracking
+知识共享: creative-commons
+css3: css3
+定制巴士: custom-bus
+CVE-2014-0160: cve-2014-0160
+Cycloramic: cycloramic
+嗒嗒巴士: dada-bus
+数据库: database
+DDoS: ddos
+Design: design
+设计模式: design-pattern
+滴滴巴士: didi-bus
+饮食: diet
+文摘: digest
+DIY: diy
+dotCloud: dotcloud
+下载机: download-machine
+梦: dream
+驱动程序: driver
+嘟嘟巴士: dudu-bus
+eComm: ecomm
+ECS: ecs
+编辑器: editor
+加密算法: encryption-algorithm
+英语: english
+创业: entrepreneurship
+杂文: essay
+F2E: f2e
+Facebook: facebook
+Fall leaves: fall-leaves
+fcitx: fcitx
+文件管理器: file-manager
+防火墙: firewall
+Fleksy: fleksy
+fork: fork
+言论自由: freedom-of-speech
+前端: front-end
+前端工程师: front-end-engineer
+GAE: gae
+高考: gaokao
+git: git
+Github: github
+免费赠送: giveaway
+Gmail: gmail
+Gmail Blue: gmail-blue
+GoAgent: goagent
+谷歌: google
+Google Analytics: google-analytics
+Google App Engine: google-app-engine
+Google Apps: google-apps
+Google Apps for Business: google-apps-for-business
+Google Plus: google-plus
+Google Public DNS: google-public-dns
+Goolge Images: goolge-images
+GoPano: gopano
+草泥马: grass-mud-horse
+H7N9: h7n9
+黑客: hacker
+黑苹果: hackintosh
+硬链接: hard-link
+硬件: hardware
+心脏出血漏洞: heartbleed
+Hello World: hello-world
+HHVM: hhvm
+Homebrew: homebrew
+HTML5: html5
+HTTP: http
+HTTPS: https
+备案: icp-filing
+ID3: id3
+理想: ideals
+IDM: idm
+IE: ie
+IFTTT: ifttt
+信息图: infographic
+信息筛选与过滤: information-filtering
+信息安全: information-security
+信息技术: information-technology
+InPrivate: inprivate
+输入法: input-method
+即时通讯（IM）: instant-messaging
+国际: international
+互联网: internet
+面试: interview
+iOS: ios
+IP: ip
+屏蔽 IP: ip-blocking
+iPhone: iphone
+iptables: iptables
+运营商劫持: isp-hijacking
+Issues: issues
+Java: java
+JavaScript: javascript
+小段子: jokes
+垃圾清理: junk-cleaning
+键盘: keyboard
+Kogeto: kogeto
+学习资源: learning-resources
+乐视: letv
+库: library
+生活: life
+Linux: linux
+Lixian: lixian
+Mac: mac
+Mac OS: mac-os
+Macintosh: macintosh
+管理: management
+马克思主义: marxism
+备忘: memo
+内存: memory
+MKLINK: mklink
+MongoDB: mongodb
+MP3: mp3
+Mp3Tag: mp3tag
+Mp3Tag使用方法: mp3tag-usage
+多版本开发: multi-version-development
+音乐文件: music-file
+音乐标签: music-tag
+随笔: musings
+MySQL: mysql
+Nautilus: nautilus
+Nemo: nemo
+netdata: netdata
+网络: network
+网络传输协议: network-protocol
+网络安全: network-security
+Nginx: nginx
+通知: notification
+营养: nutrition
+离线下载: offline-download
+在线视频: online-video
+OpenShift: openshift
+OpenSSL: openssl
+运维: operations
+优化软件: optimization-software
+OSI 模型: osi-model
+结果: outcome
+PAAS: paas
+软件包管理: package-management
+全景摄像: panoramic-camera
+密码: password
+pcntl_fork: pcntl-fork
+渗透测试: penetration-testing
+渗透工具: penetration-tools
+Performance: performance
+PHP: php
+播放器: player
+梅花: plum-blossom
+问题: problem
+程序员: programmer
+编程语言: programming-language
+代理: proxy
+公开密钥加密: public-key-cryptography
+Python: python
+Pythonbrew: pythonbrew
+奇艺: qiyi
+QQ: qq
+QQ 插件: qq-plugin
+qqext: qqext
+暴雨: rainstorm
+杂谈: ramblings
+树莓派: raspberry-pi
+现实: reality
+招聘: recruitment
+redis: redis
+远程开门: remote-door-opener
+requireJS: requirejs
+简历: resume
+逆向: reverse-engineering
+机器人: robot
+RSA: rsa
+谣言: rumor
+脚本: script
+搜索: search
+搜索引擎: search-engine
+安全: security
+服务器监控: server-monitoring
+会话劫持: session-hijacking
+Shell: shell
+SinoSky: sinosky
+关站: site-shutdown
+智能手机: smartphone
+社会工程学: social-engineering
+社交网络: social-network
+社会: society
+软链接: soft-link
+软件: software
+搜狐视频: sohu-video
+解决方案: solution
+南方周末: southern-weekly
+spam: spam
+spam comment: spam-comment
+SPDY: spdy
+SSL: ssl
+SSL/TLS: ssl-tls
+Startup: startup
+Sublime Text: sublime-text
+符号链接: symbolic-link
+sysctl: sysctl
+系统清理: system-cleanup
+系统安全: system-security
+Tag: tag
+TCP: tcp
+TCP 劫持: tcp-hijacking
+TCP/IP: tcp-ip
+腾讯: tencent
+腾讯 QQ: tencent-qq
+腾讯视频: tencent-video
+文本编辑: text-editing
+小技巧: tips
+Tornado: tornado
+传输控制协议: transmission-control-protocol
+土豆: tudou
+教程: tutorial
+Ubuntu: ubuntu
+大学: university
+unix: unix
+伪静态: url-rewriting
+视频: video
+虚拟环境: virtual-environment
+Virtualenv: virtualenv
+VPS: vps
+Web: web
+Web应用程序测试: web-application-testing
+站长: webmaster
+微信: wechat
+微信机器人: wechat-robot
+白帽子: white-hat
+Windows: windows
+Windows Update: windows-update
+Wine: wine
+wordpress: wordpress
+工作笔记: work-notes
+职场: workplace
+X 的工作体验: x-work-experience
+小猪巴士: xiaozhu-bus
+迅雷: xunlei
+迅雷离线: xunlei-offline
+YAAW: yaaw
+年终总结: year-end-summary
+youBBS: youbbs
+优酷: youku
+YouTube: youtube
+YouTube Feather: youtube-feather
+Zeitgeist: zeitgeist
+零分: zero-score

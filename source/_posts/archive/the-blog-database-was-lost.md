@@ -1,8 +1,6 @@
 ---
 title: 博客数据库丢失
 tags:
-  - backup
-  - Google
   - MySQL
   - 备份
   - 数据库

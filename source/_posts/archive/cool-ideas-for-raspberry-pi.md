@@ -2,7 +2,6 @@
 title: 40+ Cool Ideas for your Raspberry PI Project
 tags:
   - DIY
-  - Raspberry Pi
   - 树莓派
 id: 29
 categories:

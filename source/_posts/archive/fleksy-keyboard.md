@@ -3,7 +3,6 @@ title: 移动应用推荐 —— Fleksy Keyboard
 tags:
   - Android
   - Fleksy
-  - Keyboard
   - 智能手机
   - 键盘
 id: 654

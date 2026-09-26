@@ -3,7 +3,6 @@ title: SinoSky 离线下载将暂停几天（已恢复）
 tags:
   - Lixian
   - SinoSky
-  - Xunlei
   - 离线下载
   - 迅雷
 id: 128

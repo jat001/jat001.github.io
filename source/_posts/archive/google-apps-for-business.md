@@ -1,7 +1,7 @@
 ---
 title: 无限免费试用Google Apps for Business
 tags:
-  - Google
+  - 谷歌
   - Google Apps
   - Google Apps for Business
 id: 237

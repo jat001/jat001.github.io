@@ -3,7 +3,6 @@ title: 请不要宣传 SinoSky 离线下载
 tags:
   - Lixian
   - SinoSky
-  - Xunlei
   - 离线下载
   - 迅雷
   - 迅雷离线

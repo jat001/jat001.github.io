@@ -2,7 +2,6 @@
 title: Google+评论组件测试
 tags:
   - comments
-  - Google
   - Google Plus
   - JavaScript
   - 谷歌

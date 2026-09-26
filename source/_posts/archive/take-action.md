@@ -1,7 +1,7 @@
 ---
 title: 谷歌反对政府管理互联网
 tags:
-  - Google
+  - 谷歌
   - 互联网
 id: 265
 categories:

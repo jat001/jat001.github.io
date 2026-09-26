@@ -4,8 +4,6 @@ date: 2016-09-17 23:18
 tags:
   - 字符集
   - 字符编码
-  - Character Set
-  - Character Encoding
 categories:
   - 码农与 IT
 id: 20160917

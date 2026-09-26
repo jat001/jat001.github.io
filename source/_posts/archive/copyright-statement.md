@@ -1,7 +1,6 @@
 ---
 title: 声明
 tags:
-  - Creative Commons
   - 知识共享
   - 著作权
 id: 213

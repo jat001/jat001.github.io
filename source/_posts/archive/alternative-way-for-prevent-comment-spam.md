@@ -2,7 +2,6 @@
 title: 另类方法防垃圾评论
 tags:
   - AJAX
-  - comment spam
   - 垃圾评论
   - 异步
 id: 862

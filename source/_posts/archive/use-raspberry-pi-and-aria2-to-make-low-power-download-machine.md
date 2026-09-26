@@ -2,7 +2,6 @@
 title: 使用 Raspberry Pi 和 aria2 打造低功耗下载机
 tags:
   - DIY
-  - Raspberry Pi
   - 下载机
   - 树莓派
 id: 32

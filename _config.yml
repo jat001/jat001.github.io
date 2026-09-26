@@ -66,26 +66,7 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-  Geek: geek
-  Linux: linux
-  Picturmation: picturmation
-  SinoSky: sinosky
-  WordPress: wordpress
-  云平台: cloud-platform
-  互联网: internet
-  信息安全: information-security
-  小技巧: tips
-  应用软件: software
-  教程: tutorial
-  杂文: essay
-  程序员: programmer
-  码农与 IT: programmer-and-it
-  哲学: philosophy
-tag_map:
-  面试: interview
-  马克思主义: marxism
-  言论自由: freedom-of-speech
+# category_map and tag_map live in category_map.yml and tag_map.yml
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta

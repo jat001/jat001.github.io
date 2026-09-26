@@ -2,7 +2,7 @@
 title: Google 为龟速网络准备的十项功能
 tags:
   - Chrome
-  - Google
+  - 谷歌
   - Google Public DNS
   - Goolge Images
   - JavaScript

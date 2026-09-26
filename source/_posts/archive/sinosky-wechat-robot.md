@@ -1,8 +1,6 @@
 ---
 title: SinoSky 微信机器人正式上线
 tags:
-  - WeChat
-  - WeChat Robot
   - 微信
   - 微信机器人
   - 机器人

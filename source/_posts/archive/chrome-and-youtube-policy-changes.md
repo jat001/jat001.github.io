@@ -1,7 +1,7 @@
 ---
 title: Google 对 Chrome 与 YouTube 实行新的限制
 tags:
-  - Google
+  - 谷歌
   - Windows
   - YouTube
 id: 662

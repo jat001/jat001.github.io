@@ -1,0 +1,16 @@
+# Category name -> URL slug, sorted by slug. Loaded by lib/slug-maps.ts.
+云平台: cloud-platform
+杂文: essay
+Geek: geek
+信息安全: information-security
+互联网: internet
+Linux: linux
+哲学: philosophy
+Picturmation: picturmation
+程序员: programmer
+码农与 IT: programmer-and-it
+SinoSky: sinosky
+应用软件: software
+小技巧: tips
+教程: tutorial
+WordPress: wordpress

@@ -5,7 +5,6 @@ tags:
   - OpenShift
   - Python
   - SinoSky
-  - Xunlei
   - 离线下载
   - 迅雷
 id: 123

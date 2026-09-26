@@ -1,8 +1,6 @@
 ---
 title: 热烈欢迎国际空间站访问本站
 tags:
-  - April Fool's Day
-  - Google
   - Google Analytics
   - 愚人节
   - 谷歌

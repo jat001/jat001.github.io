@@ -2,7 +2,6 @@
 title: 分享几个 Linux 启动脚本
 tags:
   - Bash
-  - Script
   - Shell
   - Startup
   - 启动

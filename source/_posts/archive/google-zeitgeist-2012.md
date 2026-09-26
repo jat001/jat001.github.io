@@ -2,7 +2,7 @@
 title: Google 发布 Zeitgeist 2012 (时代精神 2012)
 tags:
   - '2012'
-  - Google
+  - 谷歌
   - Zeitgeist
 id: 81
 categories:

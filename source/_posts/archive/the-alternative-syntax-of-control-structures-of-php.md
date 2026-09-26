@@ -1,7 +1,6 @@
 ---
 title: PHP 中流程控制的替代语法
 tags:
-  - alternative syntax
   - control structures
   - PHP
   - 替代语法

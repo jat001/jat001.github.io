@@ -1,10 +1,8 @@
 ---
 title: Google 发布灵鼻子测试版
 tags:
-  - April Fool's Day
   - Gmail
   - Gmail Blue
-  - Google
   - YouTube
   - 愚人节
   - 谷歌

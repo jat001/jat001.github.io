@@ -1,8 +1,6 @@
 ---
 title: 自行编译 Mac 版变色龙，去掉开机等待5秒的错误提示
 tags:
-  - Chameleon
-  - Hackintosh
   - 变色龙
   - 黑苹果
 id: 200

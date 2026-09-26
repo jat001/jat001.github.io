@@ -1,7 +1,6 @@
 ---
 title: 晒晒我的黑苹果配置
 tags:
-  - Hackintosh
   - Mac
   - Mac OS
   - Macintosh

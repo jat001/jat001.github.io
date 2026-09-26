@@ -1,7 +1,6 @@
 ---
 title: 使用 Nemo 替代 Ubuntu 自带的文件管理器
 tags:
-  - file manager
   - Nautilus
   - Nemo
   - Ubuntu

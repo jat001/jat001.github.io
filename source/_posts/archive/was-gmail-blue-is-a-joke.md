@@ -1,10 +1,8 @@
 ---
 title: 你以为 Gmail Blue 是个笑话？
 tags:
-  - April Fool's Day
   - Gmail
   - Gmail Blue
-  - Google
   - 愚人节
   - 谷歌
 id: 178

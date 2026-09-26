@@ -2,7 +2,6 @@
 title: 使用树莓派制作的远程开门器
 tags:
   - DIY
-  - Raspberry Pi
   - 树莓派
   - 远程开门
 id: 186
