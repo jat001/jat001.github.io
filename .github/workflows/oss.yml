@@ -64,4 +64,4 @@ jobs:
           RCLONE_CONFIG_OSS_ENDPOINT: oss-${{ secrets.OSS_REGION }}.aliyuncs.com
           RCLONE_CONFIG_OSS_NO_CHECK_BUCKET: 'true'
         run: |
-          rclone sync public/ 'oss:${{ secrets.OSS_BUCKET }}' --checksum --fast-list --transfers 10 -v
+          rclone sync public/ 'oss:${{ secrets.OSS_BUCKET }}' --checksum --fast-list --transfers 10 --exclude '/.dlsdata/**' -v
