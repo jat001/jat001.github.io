@@ -27,14 +27,13 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
-      - name: Install and setup ossutil
+      - name: Install ossutil
         run: |
-          sudo apt-get update
-          sudo apt-get install libarchive-tools
-          url="$(curl -fsS https://api.github.com/repos/aliyun/ossutil/releases/latest | jq -r '.assets[] | select(.name | contains("linux-amd64")) .browser_download_url')"
-          curl -fsSL "$url" | bsdtar -xf - --strip-components=1
-          chmod a+x ossutil64
-          ./ossutil64 config -e 'https://oss-${{ secrets.OSS_REGION }}.aliyuncs.com' -i '${{ secrets.OSS_ACCESSID }}' -k '${{ secrets.OSS_ACCESSKEY }}'
+          version="$(curl -fsS https://gosspublic.alicdn.com/ossutil/v2/version.txt | awk '{print $NF}')"
+          curl -fsSLo "$RUNNER_TEMP/ossutil.zip" "https://gosspublic.alicdn.com/ossutil/v2/${version}/ossutil-${version}-linux-amd64.zip"
+          unzip -jo "$RUNNER_TEMP/ossutil.zip" '*/ossutil' -d "$RUNNER_TEMP/ossutil"
+          echo "$RUNNER_TEMP/ossutil" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/ossutil/ossutil" version
 
       - name: Generate static content
         run: |
@@ -42,5 +41,9 @@ jobs:
           pnpm run build
 
       - name: Deploy to OSS
+        env:
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESSID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESSKEY }}
+          OSS_REGION: ${{ secrets.OSS_REGION }}
         run: |
-          ./ossutil64 sync public/ 'oss://${{ secrets.OSS_BUCKET }}/' -f --delete --acl default -j 10
+          ossutil sync public/ 'oss://${{ secrets.OSS_BUCKET }}/' -f --delete --acl default -j 10 --no-progress

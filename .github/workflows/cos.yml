@@ -27,10 +27,20 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
-      - name: Install and setup coscmd
+      - name: Install and setup coscli
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          pip install -U coscmd
-          coscmd config -a '${{ secrets.COS_SECRETID }}' -s '${{ secrets.COS_SECRETKEY }}' -b '${{ secrets.COS_BUCKET }}' -r '${{ secrets.COS_REGION }}'
+          mkdir -p "$RUNNER_TEMP/coscli"
+          cd "$RUNNER_TEMP/coscli"
+          gh release download --repo tencentyun/coscli --pattern '*-linux-amd64' --pattern sha256sum.log
+          sha256sum --check --ignore-missing sha256sum.log
+          mv coscli-*-linux-amd64 coscli
+          chmod a+x coscli
+          echo "$RUNNER_TEMP/coscli" >> "$GITHUB_PATH"
+          ./coscli --version
+          ./coscli config set --secret_id '${{ secrets.COS_SECRETID }}' --secret_key '${{ secrets.COS_SECRETKEY }}'
+          ./coscli config add -b '${{ secrets.COS_BUCKET }}' -r '${{ secrets.COS_REGION }}' -a site
 
       - name: Generate static content
         run: |
@@ -39,4 +49,4 @@ jobs:
 
       - name: Deploy to COS
         run: |
-          coscmd upload -rsy --delete public/ /
+          coscli sync public/ cos://site/ -r --delete --force --routines 10
