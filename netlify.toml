@@ -9,11 +9,6 @@ ignore = "bash bin/ignore-build.sh"
 command = "pnpm run build"
 publish = "public"
 
-[build.environment]
-# Netlify pins the Node version of the image the site was created with and
-# ignores package.json engines. lib/*.ts needs Node's type stripping.
-NODE_VERSION = "24"
-
 [build.processing.html]
 pretty_urls = true
 
