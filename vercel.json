@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+
+  "framework": null,
+  "devCommand": "pnpm run server --port $PORT",
+  "ignoreCommand": "bash bin/ignore-build.sh",
+  "installCommand": "pnpm install --prod",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "./public",
+
+  "cleanUrls": true,
+  "trailingSlash": true,
+
+  "routes": [
+    {
+      "src": "^/404/?$",
+      "methods": ["GET", "HEAD"],
+      "status": 404
+    }
+  ]
+}

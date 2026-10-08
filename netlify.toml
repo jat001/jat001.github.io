@@ -1,0 +1,36 @@
+[dev]
+framework = "#custom"
+command = "pnpm run server"
+targetPort = 4000
+autoLaunch = false
+
+[build]
+ignore = "bash bin/ignore-build.sh"
+command = "pnpm run build"
+publish = "public"
+
+[build.environment]
+# Netlify pins the Node version of the image the site was created with and
+# ignores package.json engines. lib/*.ts needs Node's type stripping.
+NODE_VERSION = "24"
+
+[build.processing.html]
+pretty_urls = true
+
+[[redirects]]
+from = "/index.html"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/404"
+to = "/404.html"
+status = 404
+force = true
+
+[[redirects]]
+from = "/404.html"
+to = "/404.html"
+status = 404
+force = true

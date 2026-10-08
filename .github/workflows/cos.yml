@@ -17,6 +17,10 @@ on:
       - '!tsconfig.json'
       - '!.prettierrc'
       - '!.prettierignore'
+      - '!.gitattributes'
+      - '!bin/**'
+      - '!vercel.json'
+      - '!netlify.toml'
       - .github/workflows/cos.yml
   workflow_dispatch:
 

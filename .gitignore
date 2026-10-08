@@ -9,3 +9,7 @@ public/
 .vscode/
 !.vscode/extensions.json
 !.vscode/settings.json
+
+# platform-specific folders
+.vercel/
+.netlify/
