@@ -1,5 +1,6 @@
 {
   "json.schemaDownload.trustedDomains": {
-    "https://unpkg.com/wrangler/": true
+    "https://unpkg.com/wrangler/": true,
+    "https://openapi.vercel.sh/": true
   }
 }
